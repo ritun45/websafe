@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-ivory: #F7F5EF;
+  --color-clinical-green: #17352F;
+  --color-healthcare-teal: #285C50;
+  --color-warm-amber: #D89A28;
+  --color-risk-high: #B6423A;
+  --color-risk-moderate: #C9792B;
+  --color-risk-low: #3F8068;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #EEF3EF;
+  --color-border-med: #D9E0DC;
+  --color-text-primary: #17201D;
+  --color-text-secondary: #5E6863;
+
+  --font-heading: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-sans: "Source Sans 3", system-ui, -apple-system, sans-serif;
+
+  --shadow-subtle-sm: 0 2px 8px rgba(23, 53, 47, 0.06);
+  --shadow-subtle-md: 0 8px 24px rgba(23, 53, 47, 0.08);
+  --shadow-subtle-lg: 0 18px 45px rgba(23, 53, 47, 0.10);
+}
+
+:root {
+  --bg-ivory: #F7F5EF;
+  --primary-green: #17352F;
+  --teal-med: #285C50;
+  --amber-accent: #D89A28;
+  --red-high: #B6423A;
+  --orange-mod: #C9792B;
+  --green-low: #3F8068;
+  --surface-white: #FFFFFF;
+  --surface-soft: #EEF3EF;
+  --border-line: #D9E0DC;
+  --text-main: #17201D;
+  --text-muted: #5E6863;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-ivory);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar for clinical dashboard data tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EEF3EF;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5CD;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #99A8A0;
+}
+
+/* Print optimizations for clinical reports */
+@media print {
+  nav, footer, .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+/* Purposeful Micro-animations & Transitions */
+.card-hover {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

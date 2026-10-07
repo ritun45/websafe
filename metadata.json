@@ -1,0 +1,6 @@
+{
+  "name": "WebSafe — Medication Safety & Interaction Intelligence",
+  "description": "AI-powered medication safety and drug interaction intelligence system. Clinical-grade drug-drug, drug-food, and contraindication screening with plain-language patient explanations and pharmacist review tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
